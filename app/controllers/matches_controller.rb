@@ -17,7 +17,7 @@ class MatchesController < ApplicationController
 
   def update
     @match = Match.find(params[:id])
-    if @match.update(match_params)
+    if @match.update(post_params)
       redirect_to @match
     else
       render 'edit'

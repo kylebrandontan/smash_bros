@@ -1,4 +1,7 @@
+<center>
 <h1><%= @title %></h1>
 <h3>Ever wanted to track your matches against someone in Smash? Look no further!</h3>
 <p>Just login, post your matches, and keep track in the leaderboards to see where you rank with your wins and losses!</p>
-<%= link_to image_tag("smash_bros.png", alt: "Smash Bros", size: "320x214" ), home_path %>
+<%= link_to image_tag("smash_bros.png", alt: "Smash Bros", size: "320x214" ), home_path %><br>
+<%= link_to "Add a match now!", new_match_path, ({:class => "button button--color-secondary"})%>
+</center>
