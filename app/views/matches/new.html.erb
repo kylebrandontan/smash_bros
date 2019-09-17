@@ -1,0 +1,29 @@
+<h1>Add match 🙏</h1>
+<%= form_for :match, url: matches_path, class: "form" do |f| %>
+    <% if @match.errors.any? %>
+      <% @match.errors.full_messages.each do |msg| %>
+        <div class="message message--color-red">
+          <%= msg %>
+        </div>
+      <% end %>
+    <% end %>
+
+  <p>
+    <%= f.label :fighter1 %><br>
+    <%= f.text_field(:fighter1, {:class => "form__item"}) %>
+  </p>
+
+  <p>
+    <%= f.label :fighter2 %><br>
+    <%= f.text_field :fighter2 %>
+  </p>
+
+  <p>
+    <%= f.label :winner %><br>
+    <%= f.text_field :winner %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => "button button--color-secondary"})%>
+  </p>
+  <% end %>

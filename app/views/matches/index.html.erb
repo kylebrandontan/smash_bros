@@ -1,0 +1,23 @@
+<h1>All Matches</h1>
+  <% if @matches.empty? %>
+    <ul class="list list--large list--divide">
+      <li>
+        <div>
+          No matches yet!
+        </div>
+    <% else %>
+      <% @matches.each do |match| %>
+        <ul class="list list--large list--divide">
+          <li>
+            <div>
+              <h4><%= match.fighter1 %> versus <%= match.fighter2 %></h4>
+              <h4>🤙<%= match.winner %> won 🤙</h4>
+            </div>
+
+            <div class="list__action">
+              <%= link_to "Details", match_path(match), :class => 'button button--small' %>
+            </div>
+          </li>
+        </ul>
+      <% end %>
+    <% end %>
